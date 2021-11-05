@@ -133,7 +133,7 @@ function generateMarkdown(data) {
     `
 # ${data.title} 
 ${licenseBadge}
---------------------------------
+
 ## Table of Contents
 * [GitHub](#GitHub)
 * [Description](#description)

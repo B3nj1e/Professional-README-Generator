@@ -1,5 +1,5 @@
 ## Professional README Generator
------------------
+![license badge](https://img.shields.io/static/v1?label=License&message=MIT-Licencse&color=success)
 
 ## Table of Contents
 * [GitHub](#GitHub)
@@ -16,11 +16,11 @@ My GitHub username is B3nj1e.
 Please click [here](https://github.com/B3nj1e) to access my GitHub profile.
 
 ## Description
-This application will create a high quality README.md file, created using user inputs in the terminal. 
+This application will create a high quality README.md file, created using user inputs in the terminal via node.js. 
 
 
 ## Installation Instructions
-To use the application, please download all associated files off GitHub. Ensure node.js is installed. In the terminal run ``npm init``, followed by `` npm i inquirer``. Once the inquirer package has been installed, in the terminal type ``node index.js``. This should initia user prompts in the terminal. Answer all of the questions that are presented in the terminal. Upon completion of these steps, you should have a README.md file present under the main file.  
+To use the application, please download all associated files off GitHub. Ensure node.js is installed. In the terminal run ``npm init``, followed by `` npm i inquirer``. Once the inquirer package has been installed, in the terminal type ``node index.js``. This should initiate user prompts in the terminal. Answer all of the questions that are presented in the terminal. Upon completion of these steps, you should have a README.md file present under the main file.  
 
 ## Usage Instructions
 Please click [here]() to view a video tutorial on how to use this application. 
@@ -29,6 +29,7 @@ Please click [here]() to view a video tutorial on how to use this application.
 If you think you can improve this application, please feel free to make contributions. I will review these changes on GitHub prior to merging them to the main branch.
 
 ## Test
+To quickly test the application, answer all of the user input prompts brielfy and ensure all questions are completed. Upon completion, check the host folder for a new file call ``REAME-product.md ``
 
 ## Questions
 If you have any questions or would like to report an issue with the application, please contact me vie my email at blankemail@email.com(left blank for privacy concerns). Alternative contact me via my GitHub account listed above. 
