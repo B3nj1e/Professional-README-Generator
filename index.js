@@ -54,9 +54,8 @@ inquirer
         type: 'list', 
         message: questions[8],
         name: names[8],
-        choices: ["no license", "open source", "MIT license", "private license"]
+        choices: ["no license", "The Unlicense", "MIT license", "GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "Boost Software License 1.0"]
     },
-
     ])
 
 // TODO: Create a function to write README file
