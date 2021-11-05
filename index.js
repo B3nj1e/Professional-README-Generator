@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const questions = ["What is the title of your project?", "what is your GitHub username?", "What is your email address?", "Please enter a brief description of your project", "Please enter the installation instructions for this project", "Please enter usage instructions for this project", "Please enter the contribution guidelines", "Please enter the test instructions for this project", "Please choose a licence for your application from the list of options"];
+const questions = ["What is the title of your project?", "what is your GitHub username?", "What is your email address?", "Please enter a brief description of your project", "Please enter the installation instructions for this project", "Please enter usage instructions for this project", "Please enter the contribution guidelines", "Please enter the test instructions for this project", "Do you have any questions relating to your project?", "Please choose a licence for your application from the list of options"];
 
 const names = ["title", "github", "email", "description", "installation", "usage", "contribution", "test", "license"]
 

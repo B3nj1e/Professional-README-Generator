@@ -1,39 +1,46 @@
 
-# ReadMEEEE 
-![license badge](https://img.shields.io/static/v1?label=License&message=MITlicencse&color=success)
+# B 
+![license badge](https://img.shields.io/static/v1?label=License&message=GNULGPLv3&color=success)
 
 ## Table of Contents
 * [GitHub](#GitHub)
-* [Email](#email)
 * [Description](#description)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contribution](#contribution)
+* [Installation Instructions](#installation)
+* [Usage Instructions](#usage)
+* [Contribution Guidelines](#contribution)
 * [Test](#test)
+* [Questions](#questions)
 * [License](#license)
 
 ## GitHub
-Please click [here](https://github.com/Ben) to access my GitHub profile.
-
-## Email
-benji
+My GitHub username is e. 
+Please click [here](https://github.com/e) to access my GitHub profile.
 
 ## Description
-fully sick
+j
 
 ## Installation
-download
+a
 
 ## Usage
-use with caution
+m
 
 ## Contribution
-ben
+i
 
 ## Test
-have fun
+n
+
+## Questions
+If you have any questions, please contact me vie my email at n. Alternative contact me via my GitHub account listed above. 
 
 ## License
+If you require more information concerning the license, please click [here](https://choosealicense.com/licenses/).
 
+GNU LESSER GENERAL PUBLIC LICENSE
+      Version 3, 29 June 2007
+    
+      Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+      Everyone is permitted to copy and distribute verbatim copies
+      of this license document, but changing it is not allowed.
 
-  

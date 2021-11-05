@@ -2,7 +2,6 @@
 // If there is no license, return an empty string
 const fs = require('fs');
 
-"no license", "The Unlicense", "MIT license", "GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "Boost Software License 1.0"
 let licenseType = ""
 
 function renderLicenseBadge(license) {
@@ -15,7 +14,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-
+  licenseLink = "";
 
 }
 
@@ -113,19 +112,17 @@ ${licenseBadge}
 
 ## Table of Contents
 * [GitHub](#GitHub)
-* [Email](#email)
 * [Description](#description)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contribution](#contribution)
+* [Installation Instructions](#installation)
+* [Usage Instructions](#usage)
+* [Contribution Guidelines](#contribution)
 * [Test](#test)
+* [Questions](#questions)
 * [License](#license)
 
 ## GitHub
+My GitHub username is ${data.github}. 
 Please click [here](https://github.com/${data.github}) to access my GitHub profile.
-
-## Email
-${data.email}
 
 ## Description
 ${data.description}
@@ -142,10 +139,15 @@ ${data.contribution}
 ## Test
 ${data.test}
 
+## Questions
+If you have any questions, please contact me vie my email at ${data.email}. Alternative contact me via my GitHub account listed above. 
+
 ## License
+If you require more information concerning the license, please click [here](https://choosealicense.com/licenses/).
+
 ${licenseType}
 
-  `;
+`;
 
 
   fs.writeFile("README.md", readmeContent, (err) => {
