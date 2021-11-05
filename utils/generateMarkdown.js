@@ -115,7 +115,7 @@ ${licenseBadge}
 * [Description](#description)
 * [Installation Instructions](#installation)
 * [Usage Instructions](#usage)
-* [Contribution Guidelines](#contribution)
+* [Contribution Guidelines](#contribution guidelines)
 * [Test](#test)
 * [Questions](#questions)
 * [License](#license)
@@ -127,13 +127,13 @@ Please click [here](https://github.com/${data.github}) to access my GitHub profi
 ## Description
 ${data.description}
 
-## Installation
+## Installation Instructions
 ${data.installation}
 
-## Usage
+## Usage Instructions
 ${data.usage}
 
-## Contribution
+## Contribution Guidelines
 ${data.contribution}
 
 ## Test
@@ -151,7 +151,7 @@ ${licenseType}
 
 
   fs.writeFile("README.md", readmeContent, (err) => {
-    if (err) { console.log(err) } else { console.log("second success"); fs.readFileSync("README.md", "utf-8") }
+    if (err) { console.log(err) } else { console.log("readme file has been created and content has been successfully updated"); fs.readFileSync("README.md", "utf-8") }
   });
 
 }
