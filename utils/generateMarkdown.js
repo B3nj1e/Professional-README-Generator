@@ -1,23 +1,32 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+const fs = require('fs');
 
 "no license", "The Unlicense", "MIT license", "GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "Boost Software License 1.0"
+let licenseType = ""
 
-function renderLicenseBadge(license) { }
+function renderLicenseBadge(license) {
+  licenseColor = 'success'
+  licenseBadgeLink = `https://img.shields.io/static/v1?label=License&message=${license}&color=${licenseColor}`;
+  licenseBadge = `![license badge](${licenseBadgeLink})`
+}
 
-  // TODO: Create a function that returns the license link
-  // If there is no license, return an empty string
-  function renderLicenseLink(license) { }
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(license) {
 
-  // TODO: Create a function that returns the license section of README
-  // If there is no license, return an empty string
-  function renderLicenseSection(license) {
-    if (license.choice == "no lience") {
-      ""
-    } else if (license.choice == "MIT license") {
-      `MIT License
+
+}
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+  if (license == "no lience") {
+    licenseType = "";
+  } else if (license == "MIT license") {
+    licenseType = `MIT License
     
-       Copyright (c) 2021 ${github}
+       Copyright (c) 2021
        
        Permission is hereby granted, free of charge, to any person obtaining a copy
        of this software and associated documentation files (the "Software"), to deal
@@ -35,9 +44,9 @@ function renderLicenseBadge(license) { }
        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-       SOFTWARE.`
-    } else if (license.choice == "The Unlicense") {
-      `This is free and unencumbered software released into the public domain.
+       SOFTWARE.`;
+  } else if (license == "The Unlicense") {
+    licenseType = `This is free and unencumbered software released into the public domain.
     
        Anyone is free to copy, modify, publish, use, compile, sell, or
        distribute this software, either in source code form or as a compiled
@@ -60,43 +69,89 @@ function renderLicenseBadge(license) { }
        ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
        OTHER DEALINGS IN THE SOFTWARE.
        
-       For more information, please refer to <https://unlicense.org>`
-    } else if (license.choice == "GNU AGPLv3") {
-      `GNU AFFERO GENERAL PUBLIC LICENSE
+       For more information, please refer to <https://unlicense.org>`;
+  } else if (license == "GNU AGPLv3") {
+    licenseType = `GNU AFFERO GENERAL PUBLIC LICENSE
        Version 3, 19 November 2007
     
       Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
       Everyone is permitted to copy and distribute verbatim copies
-      of this license document, but changing it is not allowed.`
-    } else if (license.choice == "GNU GPLv3") {
-      `GNU GENERAL PUBLIC LICENSE
+      of this license document, but changing it is not allowed.`;
+  } else if (license == "GNU GPLv3") {
+    licenseType = `GNU GENERAL PUBLIC LICENSE
       Version 3, 29 June 2007
     
       Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
       Everyone is permitted to copy and distribute verbatim copies
-      of this license document, but changing it is not allowed.`
-    } else if (license.choice == "GNU LGPLv3") {  
-      `GNU LESSER GENERAL PUBLIC LICENSE
+      of this license document, but changing it is not allowed.`;
+  } else if (license == "GNU LGPLv3") {
+    licenseType = `GNU LESSER GENERAL PUBLIC LICENSE
       Version 3, 29 June 2007
     
       Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
       Everyone is permitted to copy and distribute verbatim copies
-      of this license document, but changing it is not allowed.`
-    } else if (license.choice == "Mozilla Public License 2.0") {  
-      `Mozilla Public License Version 2.0
-      ==================================`
-    } else if (license.choice == "Apache License 2.0") {
-      `Apache License
+      of this license document, but changing it is not allowed.`;
+  } else if (license == "Mozilla Public License 2.0") {
+    licenseType = `Mozilla Public License Version 2.0
+      ==================================`;
+  } else if (license == "Apache License 2.0") {
+    licenseType = `Apache License
       Version 2.0, January 2004
-      http://www.apache.org/licenses/`
-    }
-   }
+      http://www.apache.org/licenses/`;
+  }
+}
 
-  // TODO: Create a function to generate markdown for README
-  function generateMarkdown(data) {
-    return `# ${data.title}
+// TODO: Create a function to generate markdown for README
+function generateMarkdown(data) {
+  renderLicenseBadge(data.license);
+  renderLicenseSection(data.license);
+  let readmeContent = 
+   `
+    # ${data.title} ${licenseBadge}
+
+    ## Table of Contents
+    -[github](#GitHub)
+    -[email](#email)
+    -[description](#description)
+    -[installation](#installation)
+    -[usage](#usage)
+    -[contribution](#contribution)
+    -[test](#test)
+    -[licence](#licence)
+
+    #GitHub
+    Please click [here](https://github.com/${data.github}) to access my GitHub profile.
+
+    #Email
+    ${data.email}
+
+    #Description
+    ${data.description}
+
+    #Installation
+    ${data.installation}
+
+    #Usage
+    ${data.usage}
+
+    #Contribution
+    ${data.contribution}
+
+    #Test
+    ${data.test}
+
+    #License
+    
+    ${licenseType}
 
   `;
-  }
 
-  module.exports = generateMarkdown;
+  JSON.stringify(readmeContent);
+
+  fs.writeFile("README.md", readmeContent, (err) => {
+    if (err) {console.log(err)} else {console.log("second success"); fs.readFileSync("README.md", "utf-8")}
+  });
+
+}
+
+module.exports = generateMarkdown;
