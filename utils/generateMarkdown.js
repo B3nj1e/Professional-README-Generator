@@ -7,7 +7,8 @@ let licenseType = ""
 
 function renderLicenseBadge(license) {
   licenseColor = 'success'
-  licenseBadgeLink = `https://img.shields.io/static/v1?label=License&message=${license}&color=${licenseColor}`;
+  licenseName = license.split(' ').join('')
+  licenseBadgeLink = `https://img.shields.io/static/v1?label=License&message=${licenseName}&color=${licenseColor}`;
   licenseBadge = `![license badge](${licenseBadgeLink})`
 }
 
@@ -105,51 +106,50 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   renderLicenseBadge(data.license);
   renderLicenseSection(data.license);
-  let readmeContent = 
-   `
-    # ${data.title} ${licenseBadge}
+  let readmeContent =
+    `
+# ${data.title} 
+${licenseBadge}
 
-    ## Table of Contents
-    -[github](#GitHub)
-    -[email](#email)
-    -[description](#description)
-    -[installation](#installation)
-    -[usage](#usage)
-    -[contribution](#contribution)
-    -[test](#test)
-    -[licence](#licence)
+## Table of Contents
+* [GitHub](#GitHub)
+* [Email](#email)
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribution](#contribution)
+* [Test](#test)
+* [License](#license)
 
-    #GitHub
-    Please click [here](https://github.com/${data.github}) to access my GitHub profile.
+## GitHub
+Please click [here](https://github.com/${data.github}) to access my GitHub profile.
 
-    #Email
-    ${data.email}
+## Email
+${data.email}
 
-    #Description
-    ${data.description}
+## Description
+${data.description}
 
-    #Installation
-    ${data.installation}
+## Installation
+${data.installation}
 
-    #Usage
-    ${data.usage}
+## Usage
+${data.usage}
 
-    #Contribution
-    ${data.contribution}
+## Contribution
+${data.contribution}
 
-    #Test
-    ${data.test}
+## Test
+${data.test}
 
-    #License
-    
-    ${licenseType}
+## License
+${licenseType}
 
   `;
 
-  JSON.stringify(readmeContent);
 
   fs.writeFile("README.md", readmeContent, (err) => {
-    if (err) {console.log(err)} else {console.log("second success"); fs.readFileSync("README.md", "utf-8")}
+    if (err) { console.log(err) } else { console.log("second success"); fs.readFileSync("README.md", "utf-8") }
   });
 
 }
