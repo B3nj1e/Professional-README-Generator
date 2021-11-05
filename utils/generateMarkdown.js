@@ -176,7 +176,7 @@ ${licenseType}
 `;
 
 
-  fs.writeFile("README.md", readmeContent, (err) => {
+  fs.writeFile("README-product.md", readmeContent, (err) => {
     if (err) { console.log(err) } else { console.log("readme file has been created and content has been successfully updated")}
   });
 
