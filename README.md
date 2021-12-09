@@ -23,7 +23,7 @@ This application will create a high quality README.md file, created using user i
 To use the application, please download all associated files off GitHub. Ensure node.js is installed. In the terminal run ``npm init``, followed by `` npm i inquirer``. Once the inquirer package has been installed, in the terminal type ``node index.js``. This should initiate user prompts in the terminal. Answer all of the questions that are presented in the terminal. Upon completion of these steps, you should have a README.md file present under the main file.  
 
 ## Usage Instructions
-Please click [here]() to view a video tutorial on how to use this application. 
+Please click [here](https://drive.google.com/file/d/1WOKHzjdKP4WSQqiuYKNZWfqWUR0taWyw/view) to view a video tutorial on how to use this application. 
 
 ## Contribution Guidelines
 If you think you can improve this application, please feel free to make contributions. I will review these changes on GitHub prior to merging them to the main branch.
